@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Servicenetwork｜超激安！億万人が選ぶ通販</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Hiragino Kaku Gothic ProN","Meiryo","Noto Sans JP",Arial,sans-serif;background:#f4f4f4;color:#222;font-size:14px}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none}
+:root{--o:#EB5A2A;--o2:#FF7A00;--r:#E8211B;--y:#FFE14D;--g:#0A8F3C}
+
+/* ticker */
+.ticker{background:#000;color:#fff;font-size:12px;overflow:hidden;white-space:nowrap;height:28px;line-height:28px}
+.ticker span{display:inline-block;padding-left:100%;animation:tk 28s linear infinite}
+.ticker b{color:var(--y)}
+@keyframes tk{to{transform:translateX(-100%)}}
+
+/* header */
+header{background:var(--o);position:sticky;top:0;z-index:20;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.hd{max-width:1240px;margin:auto;display:flex;align-items:center;gap:14px;padding:10px 14px}
+.logo{display:flex;align-items:center;gap:6px;color:#fff;font-weight:900;font-size:24px;letter-spacing:-.5px;white-space:nowrap}
+.logo .mark{background:#fff;border-radius:8px;padding:4px;display:flex}
+.logo svg{width:34px;height:26px}
+.search{flex:1;display:flex;background:#fff;border-radius:999px;overflow:hidden;border:2px solid #fff;min-width:120px}
+.search input{flex:1;border:none;padding:10px 16px;font-size:14px;outline:none;min-width:0}
+.search button{background:#222;color:#fff;padding:0 22px;border-radius:999px;font-weight:700}
+.hicons{display:flex;gap:16px;color:#fff;font-size:12px;font-weight:700}
+.hicons div{display:flex;flex-direction:column;align-items:center;cursor:pointer;position:relative}
+.hicons .ic{font-size:20px;line-height:1}
+.badge{position:absolute;top:-6px;right:-8px;background:var(--y);color:#000;border-radius:999px;font-size:11px;padding:0 5px;font-weight:900}
+.cats{background:#fff;border-bottom:1px solid #ddd;overflow-x:auto;white-space:nowrap}
+.cats div{max-width:1240px;margin:auto;padding:0 10px}
+.cats a{display:inline-block;padding:10px 12px;font-weight:700;font-size:13px;border-bottom:3px solid transparent}
+.cats a.on,.cats a:hover{color:var(--o);border-color:var(--o)}
+
+main{max-width:1240px;margin:auto;padding:12px}
+
+/* perks bar */
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
+.perk{background:#fff;border:2px dashed var(--g);color:var(--g);border-radius:8px;padding:10px;font-weight:900;text-align:center;font-size:15px}
+.perk small{display:block;font-weight:400;color:#555;font-size:11px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:12px}
+.banner{background:linear-gradient(135deg,#FF3D00,#FF9100 60%,#FFD600);border-radius:12px;color:#fff;padding:26px;position:relative;overflow:hidden;min-height:230px}
+.banner h1{font-size:46px;font-weight:900;line-height:1.05;text-shadow:3px 3px 0 #B71C1C;-webkit-text-stroke:1px #B71C1C}
+.banner h1 em{font-style:normal;color:var(--y);font-size:64px}
+.banner p{font-weight:900;font-size:18px;margin:10px 0 14px}
+.banner .cta{background:#fff;color:var(--r);font-weight:900;font-size:20px;padding:12px 30px;border-radius:999px;animation:pulse 1s infinite;box-shadow:0 4px 0 #B71C1C}
+.banner .burst{position:absolute;right:20px;top:20px;width:150px;height:150px;background:var(--y);color:var(--r);display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:22px;line-height:1.1;clip-path:polygon(50% 0,61% 15%,79% 7%,80% 26%,98% 30%,88% 46%,100% 61%,82% 69%,85% 88%,66% 85%,55% 100%,44% 86%,25% 94%,22% 75%,3% 70%,13% 53%,0 38%,18% 30%,17% 11%,36% 16%);animation:spin 6s linear infinite}
+.banner .emojis{position:absolute;right:30px;bottom:10px;font-size:54px;letter-spacing:-6px}
+@keyframes pulse{50%{transform:scale(1.07)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.side{display:flex;flex-direction:column;gap:12px}
+.coupon{flex:1;background:#fff;border-radius:12px;border:3px solid var(--r);padding:14px;display:flex;align-items:center;gap:12px;position:relative}
+.coupon .amt{background:var(--r);color:#fff;border-radius:8px;padding:10px;font-weight:900;font-size:26px;text-align:center;min-width:110px}
+.coupon .amt small{display:block;font-size:11px}
+.coupon b{color:var(--r)}
+.coupon button{margin-top:6px;background:var(--r);color:#fff;font-weight:900;padding:6px 14px;border-radius:999px}
+
+/* flash */
+.flash{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px}
+.flash-h{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.flash-h h2{font-size:22px;font-weight:900;color:var(--r)}
+.cd{display:flex;gap:4px;align-items:center;font-weight:900}
+.cd span{background:#000;color:#fff;padding:3px 7px;border-radius:4px;font-size:16px;font-variant-numeric:tabular-nums}
+.flash-row{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px}
+.fitem{min-width:140px;max-width:140px;cursor:pointer}
+.fitem .img{height:140px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:66px;position:relative}
+.fitem .p{color:var(--r);font-weight:900;font-size:18px;margin-top:4px}
+.bar{height:14px;background:#FFD8CC;border-radius:999px;overflow:hidden;position:relative;font-size:10px;color:#fff;font-weight:700}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--r),var(--o2))}
+.bar em{position:absolute;left:6px;top:0;font-style:normal;line-height:14px}
+
+/* grid */
+.sec-h{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 12px;font-size:22px;font-weight:900}
+.sec-h:before,.sec-h:after{content:"";flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--o))}
+.sec-h:after{background:linear-gradient(90deg,var(--o),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.card{background:#fff;border-radius:8px;overflow:hidden;cursor:pointer;transition:.15s;position:relative;display:flex;flex-direction:column}
+.card:hover{box-shadow:0 4px 14px rgba(0,0,0,.18);transform:translateY(-2px)}
+.card .img{aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:84px;position:relative}
+.tag{position:absolute;left:0;top:8px;background:var(--r);color:#fff;font-weight:900;font-size:12px;padding:2px 8px;border-radius:0 999px 999px 0}
+.tag2{position:absolute;right:6px;bottom:6px;background:rgba(0,0,0,.65);color:#fff;font-size:10px;padding:2px 6px;border-radius:4px}
+.card .body{padding:8px;display:flex;flex-direction:column;gap:4px;flex:1}
+.name{font-size:12.5px;line-height:1.35;height:34px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.price b{color:var(--r);font-size:20px;font-weight:900}
+.price b small{font-size:12px}
+.price s{color:#999;font-size:11px}
+.meta{font-size:11px;color:#777;display:flex;justify-content:space-between;align-items:center}
+.stars{color:#FFA000;font-size:11px}
+.lab{display:inline-block;font-size:10px;font-weight:700;border:1px solid var(--o);color:var(--o);padding:0 4px;border-radius:3px;margin-right:3px}
+.lab.g{border-color:var(--g);color:var(--g)}
+.add{position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:#fff;border:2px solid #222;font-size:18px;font-weight:900;line-height:1}
+.add:hover{background:var(--o);color:#fff;border-color:var(--o)}
+.more{display:block;margin:18px auto;background:var(--o);color:#fff;font-weight:900;font-size:16px;padding:12px 60px;border-radius:999px}
+
+/* footer */
+footer{background:#222;color:#bbb;margin-top:30px;padding:26px 14px 90px;font-size:12px}
+footer .in{max-width:1240px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+footer h4{color:#fff;margin-bottom:8px}
+footer li{list-style:none;margin:4px 0}
+footer .pay{grid-column:1/-1;border-top:1px solid #444;padding-top:14px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+footer .pay span{background:#fff;color:#222;font-weight:900;padding:3px 8px;border-radius:4px;font-size:11px}
+footer .copy{grid-column:1/-1;text-align:center;color:#777}
+
+/* floating */
+.float{position:fixed;right:14px;bottom:90px;display:flex;flex-direction:column;gap:8px;z-index:30}
+.float button{width:56px;height:56px;border-radius:50%;background:var(--o);color:#fff;font-weight:900;font-size:11px;box-shadow:0 3px 10px rgba(0,0,0,.3);line-height:1.1}
+.float .wheelbtn{background:var(--r);animation:pulse .9s infinite;font-size:24px}
+.bottom-bar{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(90deg,#B71C1C,var(--r));color:#fff;z-index:25;display:flex;align-items:center;justify-content:center;gap:14px;padding:10px;font-weight:900}
+.bottom-bar button{background:var(--y);color:#000;font-weight:900;padding:7px 18px;border-radius:999px}
+
+/* toast */
+.toasts{position:fixed;left:14px;bottom:70px;z-index:40;display:flex;flex-direction:column;gap:6px}
+.toast{background:rgba(0,0,0,.82);color:#fff;padding:8px 12px;border-radius:999px;font-size:12px;display:flex;align-items:center;gap:8px;animation:tin .3s}
+.toast i{font-style:normal;font-size:18px}
+@keyframes tin{from{transform:translateX(-120%)}}
+
+/* modal */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:none;align-items:center;justify-content:center;padding:14px}
+.ov.on{display:flex}
+.modal{background:#fff;border-radius:16px;max-width:420px;width:100%;padding:22px;text-align:center;position:relative;max-height:92vh;overflow:auto}
+.x{position:absolute;right:10px;top:8px;background:none;font-size:24px;color:#888}
+.wheel-wrap{position:relative;width:280px;height:280px;margin:12px auto}
+.wheel{width:100%;height:100%;border-radius:50%;border:8px solid var(--y);box-shadow:0 0 0 4px var(--r);transition:transform 4s cubic-bezier(.17,.67,.12,1)}
+.pin{position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:28px solid #222;z-index:2}
+.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:#fff;border:4px solid var(--r);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--r);font-size:13px}
+.modal h3{font-size:24px;font-weight:900;color:var(--r)}
+.big{background:var(--r);color:#fff;font-weight:900;font-size:18px;padding:12px 40px;border-radius:999px;margin-top:10px}
+.pimg{height:220px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:120px;margin-bottom:12px}
+
+/* drawer */
+.drawer{position:fixed;top:0;right:0;bottom:0;width:360px;max-width:92vw;background:#fff;z-index:60;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;box-shadow:-4px 0 20px rgba(0,0,0,.3)}
+.drawer.on{transform:none}
+.drawer h3{background:var(--o);color:#fff;padding:14px;font-size:18px;display:flex;justify-content:space-between}
+.drawer h3 button{background:none;color:#fff;font-size:22px}
+.citems{flex:1;overflow:auto;padding:10px}
+.ci{display:flex;gap:10px;align-items:center;border-bottom:1px solid #eee;padding:8px 0}
+.ci .e{font-size:38px;width:56px;height:56px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.ci .n{flex:1;font-size:12px}
+.ci .n b{color:var(--r);font-size:15px;display:block}
+.qty{display:flex;align-items:center;gap:4px}
+.qty button{width:24px;height:24px;border-radius:50%;background:#eee;font-weight:900}
+.cfoot{padding:14px;border-top:1px solid #ddd}
+.save{background:#E8F5E9;color:var(--g);font-weight:700;padding:6px;border-radius:6px;font-size:12px;margin-bottom:8px;text-align:center}
+.cfoot .tot{display:flex;justify-content:space-between;font-weight:900;font-size:18px;margin-bottom:8px}
+.cfoot .tot b{color:var(--r)}
+.cfoot button{width:100%;background:var(--o);color:#fff;font-weight:900;font-size:17px;padding:13px;border-radius:999px}
+.empty{text-align:center;color:#999;padding:40px 0;font-size:40px}
+.empty p{font-size:13px}
+
+@media(max-width:820px){
+ .hero{grid-template-columns:1fr}.banner h1{font-size:32px}.banner h1 em{font-size:44px}.banner .burst{width:100px;height:100px;font-size:15px}
+ .perks{grid-template-columns:1fr;}.perk{font-size:13px;padding:6px}
+ .hicons div:not(.cartbtn){display:none}.logo span{display:none}
+ footer .in{grid-template-columns:1fr 1fr}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ .bottom-bar{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker"><span>🔥 <b>新規ユーザー限定</b> 全品最大<b>90%OFF</b>！！ ／ 🚚 全品送料無料・90日以内無料返品 ／ 🎁 今だけ！¥5,000クーポンバンドル配布中 ／ ⚡ 東京都の田中様が「LEDライト」を購入しました ／ 💥 毎日新商品10万点以上入荷！！ ／ 👑 億万人が選んだ超お得な価格で！</span></div>
+
+<header>
+ <div class="hd">
+  <a class="logo" href="#top">
+   <span class="mark"><svg viewBox="270 395 820 610"><path fill="#EB5A2A" d="M278 553 605 403 1083 491 1081 803 752 997 288 856 278 850Z"/></svg></span>
+   <span>Servicenetwork</span>
+  </a>
+  <form class="search" id="sf"><input id="q" placeholder="🔍 ワイヤレスイヤホン ¥199〜 激安！"><button>検索</button></form>
+  <div class="hicons">
+   <div><span class="ic">🏷️</span>ベストセラー</div>
+   <div><span class="ic">⭐</span>5つ星</div>
+   <div><span class="ic">👤</span>ログイン</div>
+   <div class="cartbtn" id="cartBtn"><span class="ic">🛒</span>カート<span class="badge" id="cnt">0</span></div>
+  </div>
+ </div>
+ <nav class="cats"><div id="cats"></div></nav>
+</header>
+
+<main id="top">
+ <div class="perks">
+  <div class="perk">✅ 全品送料無料<small>期間限定・最短7〜15営業日でお届け</small></div>
+  <div class="perk">✅ 無料返品 90日間<small>ご満足いただけない場合は全額返金</small></div>
+  <div class="perk">✅ 価格調整保証<small>30日以内に値下がりしたら差額を返金</small></div>
+ </div>
+
+ <section class="hero">
+  <div class="banner">
+   <div class="burst">最大<br>90%<br>OFF!!</div>
+   <h1>超激安<br><em>¥99</em>〜！！</h1>
+   <p>億万人が選んだ！工場直送で最安値に挑戦！</p>
+   <button class="cta" onclick="openWheel()">今すぐ買い物する ▶</button>
+   <div class="emojis">🎧👟💄🧸</div>
+  </div>
+  <div class="side">
+   <div class="coupon"><div class="amt">¥5,000<small>クーポンバンドル</small></div><div><b>新規ユーザー限定！</b><br>最初のご注文に使える<br><button onclick="claim(this)">受け取る</button></div></div>
+   <div class="coupon" style="border-color:var(--g)"><div class="amt" style="background:var(--g)">30%<small>OFF</small></div><div><b style="color:var(--g)">アプリ限定割引</b><br>今すぐダウンロード！<br><button style="background:var(--g)" onclick="claim(this)">受け取る</button></div></div>
+  </div>
+ </section>
+
+ <section class="flash">
+  <div class="flash-h"><h2>⚡ 稲妻セール</h2><div class="cd">終了まで <span id="h">00</span>:<span id="m">00</span>:<span id="s">00</span></div><span style="color:#888;font-size:12px">数量限定！なくなり次第終了！！</span></div>
+  <div class="flash-row" id="flash"></div>
+ </section>
+
+ <div class="sec-h">💥 あなたへのおすすめ 💥</div>
+ <div class="grid" id="grid"></div>
+ <button class="more" id="more">さらに表示 ▼</button>
+</main>
+
+<footer>
+ <div class="in">
+  <div><h4>Servicenetworkについて</h4><ul><li>会社概要</li><li>アフィリエイト</li><li>インフルエンサー募集</li><li>採用情報</li></ul></div>
+  <div><h4>カスタマーサービス</h4><ul><li>返品・返金ポリシー</li><li>配送について</li><li>知的財産ポリシー</li><li>お問い合わせ</li></ul></div>
+  <div><h4>ヘルプ</h4><ul><li>サポートセンター</li><li>安全センター</li><li>購入者保護</li><li>サイトマップ</li></ul></div>
+  <div><h4>アプリをダウンロード</h4><ul><li>📱 iOS版</li><li>🤖 Android版</li><li>🔔 価格低下アラート</li><li>📦 注文追跡</li></ul></div>
+  <div class="pay">お支払い方法：<span>VISA</span><span>Master</span><span>JCB</span><span>AMEX</span><span>PayPay</span><span>コンビニ</span><span>Apple Pay</span></div>
+  <div class="copy">© 2026 Servicenetwork Inc. All rights reserved. ※このサイトはデモ用のモックアップです。実際の販売は行っていません。</div>
+ </div>
+</footer>
+
+<div class="float">
+ <button class="wheelbtn" onclick="openWheel()">🎡</button>
+ <button onclick="scrollTo({top:0,behavior:'smooth'})">▲<br>TOP</button>
+</div>
+<div class="bottom-bar">🎁 あと<span id="left">¥1,999</span>で追加20%OFF！ <button onclick="openCart()">カートを見る</button></div>
+<div class="toasts" id="toasts"></div>
+
+<div class="ov" id="wheelOv"><div class="modal">
+ <button class="x" onclick="closeOv('wheelOv')">×</button>
+ <h3>🎉 ルーレットを回して<br>豪華賞品GET！！</h3>
+ <p style="font-size:12px;color:#666;margin-top:4px">100%当たる！新規ユーザー限定</p>
+ <div class="wheel-wrap"><div class="pin"></div><canvas class="wheel" id="wheel" width="280" height="280"></canvas><div class="hub">SPIN</div></div>
+ <div id="wres"></div>
+ <button class="big" id="spinBtn" onclick="spin()">回す！！</button>
+</div></div>
+
+<div class="ov" id="pOv"><div class="modal" id="pBody"></div></div>
+
+<div class="drawer" id="drawer">
+ <h3>🛒 カート (<span id="cnt2">0</span>)<button onclick="closeCart()">×</button></h3>
+ <div class="citems" id="citems"></div>
+ <div class="cfoot">
+  <div class="save" id="saved">✅ 合計 ¥0 お得になりました！</div>
+  <div class="tot"><span>合計</span><b id="total">¥0</b></div>
+  <button onclick="checkout()">ご注文手続きへ（送料無料）</button>
+ </div>
+</div>
+
+<script>
+const CATS=["おすすめ","レディース","メンズ","家電・ガジェット","ホーム・キッチン","ビューティー","おもちゃ","スポーツ","ペット用品","カー用品","文房具","ジュエリー"];
+const BG=["#FFE9DF","#FFF4CC","#E3F2FD","#FCE4EC","#E8F5E9","#F3E5F5","#FFF3E0","#E0F7FA"];
+const P=[
+["🎧","2026新款 ワイヤレスイヤホン Bluetooth5.3 超重低音 ノイズキャンセリング 防水 高音質 iPhone/Android対応",498,4980],
+["⌚","スマートウォッチ 血圧 心拍数 歩数計 着信通知 多機能 日本語説明書付き 男女兼用",1299,12800],
+["👟","厚底スニーカー レディース 軽量 通気性 ランニングシューズ 韓国風 おしゃれ 歩きやすい",1580,8900],
+["💡","LEDテープライト 10m RGB 16色 リモコン付き 部屋 間接照明 インテリア 雰囲気",399,3980],
+["🧸","超巨大 ぬいぐるみ くま 120cm ふわふわ 抱き枕 誕生日 プレゼント 可愛い",1890,9980],
+["📱","スマホケース 耐衝撃 キラキラ 韓国 かわいい 全機種対応 ストラップ付き",99,1980],
+["💄","リップティント 12色セット 落ちない 保湿 プチプラ コスメ 韓国コスメ風",299,2980],
+["🧹","電動回転ブラシ お風呂掃除 コードレス 多機能 6種ヘッド 強力 楽々",1180,6980],
+["🕶️","サングラス メンズ 偏光 UV400 運転 釣り ゴルフ アウトドア 超軽量",199,3480],
+["🎒","リュック 大容量 防水 USB充電ポート 通勤 通学 ビジネス 盗難防止",980,5980],
+["🍳","フライパン 3点セット ガラス蓋付き IH対応 焦げ付かない 新生活",1480,8980],
+["🐶","ペット用 自動給水器 静音 フィルター付き 猫 犬 2.5L 光る",880,4580],
+["🔦","超強力 懐中電灯 LED 軍用 USB充電 ズーム 防水 防災 キャンプ",298,2980],
+["💍","リング 18K風 キラキラ ジルコニア 指輪 レディース 金属アレルギー対応",88,1980],
+["🧦","靴下 10足セット メンズ くるぶし 抗菌防臭 綿 スポーツ",399,2480],
+["🎮","携帯ゲーム機 レトロゲーム 10000種類内蔵 3.5インチ 2人対戦 プレゼント",1980,14800],
+["🪴","人工観葉植物 フェイクグリーン 鉢付き 本物そっくり インテリア 手入れ不要",498,3980],
+["🧴","ヘアオイル 洗い流さない トリートメント さらさら 高級感 いい香り 100ml",199,2980],
+["🚗","車載ホルダー スマホ 360度回転 マグネット 吹き出し口 強力固定",298,2480],
+["✏️","文房具 50点セット 可愛い 韓国 ペン シール ノート 新学期 プレゼント",599,3980],
+["🧥","ダウンジャケット メンズ 冬 軽量 防寒 フード付き 大きいサイズ 暖かい",2480,19800],
+["🏀","ヨガマット 10mm 厚手 滑り止め 収納ベルト付き 筋トレ ピラティス",780,4980],
+["🔌","USB充電器 65W 4ポート 急速充電 PD対応 折りたたみ 超小型",698,5980],
+["🪞","LEDミラー 女優ミラー 卓上 3色調光 10倍拡大鏡付き 化粧鏡",880,6980],
+["🛏️","低反発枕 肩こり 首こり 安眠 いびき防止 洗えるカバー ホテル仕様",980,7980],
+["🎤","カラオケマイク Bluetooth スピーカー一体型 エコー 子供 家庭用",598,4980],
+["🧤","スマホ対応 手袋 防寒 裏起毛 タッチパネル 自転車 バイク",189,1980],
+["📷","防犯カメラ ワイヤレス 屋外 WiFi 夜間カラー 人感センサー 双方向通話",1680,12800],
+["🍵","マグカップ 保温 電動 USB 55℃ キープ オフィス 冬 プレゼント",498,3980],
+["🎀","ヘアアクセサリー 30点セット リボン クリップ ゴム 韓国 かわいい",159,1580]
+];
+const NAMES=["東京都の田中様","大阪府のY様","北海道のさくら様","福岡県のK様","愛知県の鈴木様","神奈川県のM様","沖縄県の比嘉様","京都府のA様"];
+const yen=n=>"¥"+n.toLocaleString();
+const rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const items=P.map((p,i)=>({id:i,e:p[0],n:p[1],p:p[2],o:p[3],bg:BG[i%BG.length],sold:rnd(3,999)*(Math.random()<.5?100:10),r:(4+Math.random()).toFixed(1),rev:rnd(80,9999)}));
+const disc=it=>Math.round((1-it.p/it.o)*100);
+const soldTxt=s=>s>=10000?(s/10000).toFixed(1).replace(".0","")+"万+点":s.toLocaleString()+"+点";
+
+document.getElementById("cats").innerHTML=CATS.map((c,i)=>`<a href="#top" class="${i?"":"on"}" onclick="pickCat(this)">${c}</a>`).join("");
+function pickCat(a){document.querySelectorAll(".cats a").forEach(x=>x.classList.remove("on"));a.classList.add("on");shuffleGrid()}
+
+function card(it){
+ const labs=[];if(it.sold>5000)labs.push('<span class="lab">ベストセラー</span>');if(Math.random()<.5)labs.push('<span class="lab g">送料無料</span>');if(Math.random()<.3)labs.push('<span class="lab">残りわずか</span>');
+ return `<div class="card" onclick="openP(${it.id})"><div class="img" style="background:${it.bg}">${it.e}<span class="tag">-${disc(it)}%</span>${Math.random()<.4?'<span class="tag2">🔥 本日'+rnd(50,900)+'人購入</span>':''}</div>
+ <div class="body"><div class="name">${it.n}</div><div>${labs.join("")}</div><div class="price"><b><small>¥</small>${it.p.toLocaleString()}</b><s>${yen(it.o)}</s></div>
+ <div class="meta"><span class="stars">★★★★★ ${it.r}</span><span>${soldTxt(it.sold)}販売</span></div></div>
+ <button class="add" onclick="event.stopPropagation();add(${it.id})">+</button></div>`;
+}
+let shown=0;const grid=document.getElementById("grid");
+function render(list){grid.innerHTML=list.map(card).join("")}
+function shuffleGrid(){render([...items].sort(()=>Math.random()-.5));}
+shuffleGrid();
+document.getElementById("more").onclick=()=>{grid.insertAdjacentHTML("beforeend",[...items].sort(()=>Math.random()-.5).slice(0,12).map(card).join(""))};
+document.getElementById("sf").onsubmit=e=>{e.preventDefault();const q=document.getElementById("q").value.trim();const r=q?items.filter(i=>i.n.includes(q)):items;render(r.length?r:items);toast("🔍",r.length?`「${q}」の検索結果 ${r.length*1287}件`:"該当なし…おすすめ商品を表示します");grid.scrollIntoView({behavior:"smooth"})};
+
+// flash
+document.getElementById("flash").innerHTML=[...items].sort(()=>Math.random()-.5).slice(0,10).map(it=>{const pct=rnd(55,97);return `<div class="fitem" onclick="openP(${it.id})"><div class="img" style="background:${it.bg}">${it.e}<span class="tag">-${disc(it)}%</span></div><div class="p">${yen(Math.round(it.p*.6))}</div><div class="bar"><i style="width:${pct}%"></i><em>${pct}% 売れました</em></div></div>`}).join("");
+let end=Date.now()+(rnd(2,5)*3600+rnd(0,3599))*1000;
+setInterval(()=>{let d=Math.max(0,end-Date.now())/1000;if(d<=0)end=Date.now()+3*3600e3;const f=n=>String(Math.floor(n)).padStart(2,"0");h.textContent=f(d/3600);m.textContent=f(d%3600/60);s.textContent=f(d%60)},250);
+
+// cart
+const cart={};
+function add(id){cart[id]=(cart[id]||0)+1;updCart();const it=items[id];toast(it.e,"カートに追加しました！あと少しで送料無料…（もう無料です）")}
+function updCart(){const ids=Object.keys(cart).filter(k=>cart[k]>0);const c=ids.reduce((a,k)=>a+cart[k],0);cnt.textContent=cnt2.textContent=c;
+ let t=0,o=0;citems.innerHTML=ids.length?ids.map(k=>{const it=items[k];t+=it.p*cart[k];o+=it.o*cart[k];return `<div class="ci"><div class="e" style="background:${it.bg}">${it.e}</div><div class="n">${it.n.slice(0,30)}…<b>${yen(it.p)}</b></div><div class="qty"><button onclick="q(${k},-1)">−</button>${cart[k]}<button onclick="q(${k},1)">+</button></div></div>`}).join(""):'<div class="empty">🛒<p>カートは空です<br>今すぐお得な商品を探そう！</p></div>';
+ total.textContent=yen(t);saved.textContent=`✅ 合計 ${yen(o-t)} お得になりました！`;const l=Math.max(0,1999-t);left.textContent=yen(l);}
+function q(k,d){cart[k]=Math.max(0,cart[k]+d);updCart()}
+function openCart(){drawer.classList.add("on")}function closeCart(){drawer.classList.remove("on")}
+cartBtn.onclick=openCart;updCart();
+function checkout(){if(!Object.values(cart).some(v=>v)){toast("😢","カートが空です");return}pBody.innerHTML=`<button class="x" onclick="closeOv('pOv')">×</button><div style="font-size:70px">📦</div><h3>ちょっと待って！！</h3><p style="margin:10px 0">このサイトはデモです。<br>実際の注文・お支払いは行われません。</p><button class="big" onclick="closeOv('pOv')">買い物を続ける</button>`;closeCart();pOv.classList.add("on")}
+
+// product modal
+function openP(id){const it=items[id];pBody.innerHTML=`<button class="x" onclick="closeOv('pOv')">×</button><div class="pimg" style="background:${it.bg}">${it.e}</div><p style="text-align:left;font-size:13px">${it.n}</p>
+ <div class="price" style="justify-content:flex-start;margin:8px 0"><b style="font-size:28px">${yen(it.p)}</b><s>${yen(it.o)}</s><span class="lab">-${disc(it)}%</span></div>
+ <p style="text-align:left;font-size:12px;color:#666"><span class="stars">★★★★★</span> ${it.r}（${it.rev.toLocaleString()}件のレビュー）｜${soldTxt(it.sold)}販売<br>🚚 送料無料・お届け予定 ${rnd(7,12)}〜${rnd(13,20)}営業日<br>⏰ <b style="color:var(--r)">残り${rnd(2,9)}点！</b> ${rnd(10,99)}人がカートに入れています</p>
+ <button class="big" style="width:100%" onclick="add(${id});closeOv('pOv')">🛒 カートに追加</button>`;pOv.classList.add("on")}
+function closeOv(id){document.getElementById(id).classList.remove("on")}
+document.querySelectorAll(".ov").forEach(o=>o.onclick=e=>{if(e.target===o)o.classList.remove("on")});
+
+// coupons
+function claim(b){b.textContent="✔ 受け取り済み";b.disabled=true;b.style.opacity=.6;toast("🎁","クーポンを受け取りました！お急ぎください、24時間で失効します")}
+
+// toasts
+function toast(i,t){const d=document.createElement("div");d.className="toast";d.innerHTML=`<i>${i}</i>${t}`;toasts.appendChild(d);setTimeout(()=>d.remove(),3500);while(toasts.children.length>3)toasts.firstChild.remove()}
+setInterval(()=>{const it=items[rnd(0,items.length-1)];toast(it.e,`${NAMES[rnd(0,NAMES.length-1)]}が${rnd(1,59)}秒前に購入しました`)},6000);
+
+// wheel
+const SEG=[["¥5,000","#E8211B"],["90%OFF","#FF7A00"],["¥0商品","#FFC400"],["送料無料","#0A8F3C"],["¥3,000","#E8211B"],["もう1回","#FF7A00"],["70%OFF","#FFC400"],["¥10,000","#7B1FA2"]];
+(function(){const c=wheel.getContext("2d"),R=140,n=SEG.length;SEG.forEach((s,i)=>{const a0=i*2*Math.PI/n-Math.PI/2,a1=a0+2*Math.PI/n;c.beginPath();c.moveTo(R,R);c.arc(R,R,R,a0,a1);c.fillStyle=s[1];c.fill();c.save();c.translate(R,R);c.rotate((a0+a1)/2);c.fillStyle="#fff";c.font="bold 16px sans-serif";c.textAlign="right";c.fillText(s[0],R-14,6);c.restore()})})();
+let rot=0,spun=false;
+function openWheel(){wheelOv.classList.add("on")}
+function spin(){if(spun){closeOv("wheelOv");return}spun=true;const win=0;const n=SEG.length;rot+=360*6+(360-(win+.5)*360/n);wheel.style.transform=`rotate(${rot}deg)`;spinBtn.disabled=true;
+ setTimeout(()=>{wres.innerHTML=`<h3 style="margin-top:4px">🎊 おめでとうございます！！ 🎊</h3><p><b style="color:var(--r);font-size:20px">¥5,000クーポン</b>が当たりました！<br><small>有効期限：あと 09:59</small></p>`;spinBtn.disabled=false;spinBtn.textContent="今すぐ使う！";},4200)}
+setTimeout(openWheel,2500);
+</script>
+</body>
+</html>
